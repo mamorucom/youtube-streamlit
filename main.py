@@ -11,6 +11,24 @@ df = pd.DataFrame({
     '2列目': [10,20,30,40]
 })
 
+# 表の細かい設定はできない
 # st.write(df)
 
-st.dataframe(df, width=100, height=100)
+# 表の細かい設定ができる
+# st.dataframe(df.style.highlight_max(axis=0), width=600, height=600)
+
+# staticなテーブル
+st.table(df.style.highlight_max(axis=0))
+
+# マジックコマンド
+"""
+# 章
+## 節
+### 項
+
+```python
+import streamlit as st
+import numpy as np
+import pandas as pd
+```
+"""
