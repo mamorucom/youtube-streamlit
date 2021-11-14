@@ -62,7 +62,14 @@ st.title('Streamlit 超入門')
 # 画像表示
 st.write('Display Image')
 
-img = Image.open('sample.jpg')
+# セレクトボックス
+option = st.selectbox(('あなたが好きな数字を教えてください'),
+ list(range(1,11))
+)
+'あなたの好きな数字は、',option,'です。'
 
-# use_column_width: 実際のレイアウトの横幅に合わせる
-st.image(img, caption='baby', use_column_width=True)
+# チェックボックス
+if st.checkbox('Show Image'):
+    img = Image.open('sample.jpg')
+    # use_column_width: 実際のレイアウトの横幅に合わせる
+    st.image(img, caption='baby', use_column_width=True)
