@@ -33,15 +33,25 @@ st.write('DataFreme')
 # ```
 # """
 
+# 
+# グラフ描画
+# 
+# df = pd.DataFrame(
+#     np.random.rand(20,3),
+#     columns=['a','b','c']
+# )
 
-df = pd.DataFrame(
-    np.random.rand(20,3),
-    columns=['a','b','c']
-)
+# # 折れ線グラフ
+# st.line_chart(df)
+# # エリアチャート
+# st.area_chart(df)
+# # 棒グラフ
+# st.bar_chart(df)
 
-# 折れ線グラフ
-st.line_chart(df)
-# エリアチャート
-st.area_chart(df)
-# 棒グラフ
-st.bar_chart(df)
+# マップ
+# df = pd.DataFrame(
+#     np.random.rand(100,2) / [50,50] + [35.69,139.70],
+#     columns=['lat','lon']
+# )
+# st.map(df)
+ 
