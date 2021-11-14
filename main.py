@@ -60,7 +60,17 @@ st.title('Streamlit 超入門')
 # st.map(df)
 
 # 画像表示
-st.write('Display Image')
+# st.write('Display Image')
+st.write('Interactive Widgets')
+
+# テキスト入力
+text = st.text_input('あなたの趣味を教えてください。')
+'あなたの趣味：', text
+
+# スライダー
+condition = st.slider('あなたの今の調子は？',0,100,50)
+'コンディション：', condition
+
 
 # セレクトボックス
 option = st.selectbox(('あなたが好きな数字を教えてください'),
