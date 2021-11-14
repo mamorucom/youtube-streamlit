@@ -1,10 +1,14 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+# from tkinter import *
+from PIL import Image
+
+# import PIL.Image
 
 st.title('Streamlit 超入門')
 
-st.write('DataFreme')
+# st.write('DataFreme')
 
 # df = pd.DataFrame({
 #     '1列目': [1,2,3,4],
@@ -54,4 +58,11 @@ st.write('DataFreme')
 #     columns=['lat','lon']
 # )
 # st.map(df)
- 
+
+# 画像表示
+st.write('Display Image')
+
+img = Image.open('sample.jpg')
+
+# use_column_width: 実際のレイアウトの横幅に合わせる
+st.image(img, caption='baby', use_column_width=True)
