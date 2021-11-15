@@ -85,8 +85,23 @@ if st.checkbox('Show Image'):
     st.image(img, caption='baby', use_column_width=True)
 
 # サイドバー
-text = st.sidebar.text_input('あなたの趣味を教えてください。')
-condition = st.sidebar.slider('あなたの今の調子は？',0,100,50)
+# text = st.sidebar.text_input('あなたの趣味を教えてください。')
+# condition = st.sidebar.slider('あなたの今の調子は？',0,100,50)
 
-'あなたの趣味：', text
-'コンディション：', condition
+# 'あなたの趣味：', text
+# 'コンディション：', condition
+
+# 2カラム
+left_column, right_column = st.columns(2)
+button = left_column.button('右からカラムに文字を表示')
+if button:
+    right_column.write('ここは右カラム')
+
+# expander
+expander1 = st.expander('問い合わせ1')
+expander1.write('問い合わせ内容1を書く')
+expander1.write('問い合わせ内容1を書く')
+expander2 = st.expander('問い合わせ2')
+expander2.write('問い合わせ内容2を書く')
+expander3 = st.expander('問い合わせ3')
+expander3.write('問い合わせ内容3を書く')
